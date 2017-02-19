@@ -1,0 +1,1286 @@
+/*!
+    * Author: Mason Ziedonis
+    * URL: www.masonziedonis.com
+    * Email: mziedonis@berkeley.edu
+    * Program Name: Mason Ziedonis's Personal Website
+    * Date Started: Jan. 4, 2017
+    * Date Last Updated: Feb. 19, 2017
+    * Github: https://github.com/masonziedonis/websites/tree/masonziedonis
+    *
+    * Description: This is the style page for most styles found on my personal website.
+    *
+    * Copyright (C) 2017 Mason Ziedonis
+*/
+
+/*
+***** Main Section Layouts ***** 
+*/
+html {
+    height: 100vh; /* set viewport constraint */
+    min-height: 100%; /* enforce height */
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #313131;
+    color: white;
+    overflow: scroll;
+    min-height: 100%;
+}
+section {
+    display: inline-block;
+    width: 100%;
+    min-height: 100%;
+}
+section:first-of-type {
+    padding-top: 75px;
+}
+header {
+    position: fixed;
+    z-index: 999;
+    height: 75px;
+    line-height: 75px;
+    width: 100%;
+    border-bottom: 1px solid white;
+    background-color: whitesmoke;
+    opacity: 0.8;
+}
+#home {
+    height: 100vh;
+    text-align: center;
+    background: url("../img/home.jpg") no-repeat center center fixed;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -ms-background-size: 100% 100%;
+}
+#about {
+    margin: 0;
+    padding: 0;
+    color: #3a3a3a;
+    background-color: #d6e0e9;
+    min-height: 0;
+}
+#about div {
+    display: inline-block; 
+    width: 100%;
+}
+#about div:nth-of-type(1) {
+    background-color: #9c9c9c;
+    color: #111;
+    padding: 1rem 0;
+}
+#about div:nth-of-type(3) {
+    background-color: #6a6d77; 
+    color: #eaeaea;
+    padding: 1rem 0;
+}
+#about div:nth-of-type(3) a:visited {
+    color: #eaeaea;
+}
+#blog  {
+    background-color: #313131;
+    text-align: center;
+    color: #e4e4e4;
+    font-size: 1.7rem;
+}
+body section:last-of-type {
+    margin-bottom: 50px !important;
+}
+#contact {
+    min-height: 0;
+    padding-bottom: 30px;
+    background-color: #313131;
+}
+footer {
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    background-color: #c2c3c2;
+    color: #222;
+    opacity: 0.9;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+
+}
+.fixed-footer {
+    display: none;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    background-color: #c2c3c2;
+    height: 100px;
+    line-height: 100px;
+    font-size: 4rem;
+}
+.fixed-footer a {
+    margin-right: 13px !important;
+}
+#cv {
+    padding-top: 0;
+}
+#cv .section {
+    background-color: gray;
+}
+#cv .section:nth-of-type(1) {
+    background-color: #464646;
+    color: white;
+}
+#cv .section:nth-of-type(2) {
+    background-color: #a5a5a5;
+    color: #333;
+}
+#cv .section:nth-of-type(2) a:visited, #cv .section:nth-of-type(2) a {
+    color: #333;
+}
+#cv .section:nth-of-type(3) {
+    background-color: #393a44;
+    color: white;
+}
+#cv .section:nth-of-type(3) a:visited, #cv .section:nth-of-type(3) a {
+     color: white;
+}
+#cv .section:nth-of-type(4) {
+    background-color: #8598a7;
+    color: black;
+}
+#cv .section:nth-of-type(5) {
+    background-color: #293638;
+    color: white;
+}
+#cv .section:nth-of-type(6) {
+    background-color: #bbb298;
+    color: black;
+}
+#cv .section:nth-of-type(7) {
+    background-color: #676955;
+    color: white;
+}
+#page-cv .scrollToTop {
+    display: none !important;
+}
+.scroll-down {
+    position: fixed;
+    bottom: 100px;
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    z-index: 0;
+}
+#music .music-element-section {
+    padding: 50px;
+}
+#music iframe {
+    width: 80%;
+    margin-left: 10%;
+    height: 50%;
+    margin-top: 20%;
+}
+#music div {
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+#back-to-the-future {
+    background-color: black;
+    height: 50%;
+}
+#opening-up-cloud-9 {
+    background-color: #fffcf9;
+    height: 50%;
+}
+#music .music-element-section p {
+    padding: 35px;
+    opacity: 0.9;
+    border-radius: 100px;
+}
+#upcoming {
+    width: 70% !important;
+    margin: 0 15%;
+    background-color: #4a4646;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+.course {
+    border-width: 1px;
+    border-style: solid;
+    padding: 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 30px;
+    background: #b5b5b5;
+    color: #222;
+    margin: 30px 2% 0 2%;
+    min-width: 96%;
+    display: none;
+}
+.course-ee {
+    background-color: #b5b5b5;
+    color: #222;
+    border-color: #e4e4e4;
+}
+.course-cs {
+    background-color: #fbfbfb;
+    color: #222;
+    border-color: #2f2f2f;
+}
+.course-math {
+    background-color: #6b6b6b;
+    color: #f3f3f3;
+    border-color: white;
+}
+#courses {
+	-moz-column-count: 2;
+	-moz-column-gap: 0px;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 0px;
+	column-count: 2;
+	column-gap: 0px;
+	width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    background: url(../img/black-gravel.jpg) fixed repeat;
+    min-height: 0;
+}
+#page-education #skillset {
+    min-height: 0; 
+    background: url("../img/black-wood.jpg") fixed repeat;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -ms-background-size: 100% 100%;
+    padding-bottom: 50px;
+}
+#skillset ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#skillset div {
+    opacity: 0.98;
+    background: #b3b4b3;
+    width: 95%;
+    margin: auto;
+    padding-bottom: 1rem;
+}
+#skillset li {
+    padding: 7px 0;
+    margin: 0;
+    width: 100%;
+    margin-left: -50px;
+}
+#course-filter {
+    min-height: 0;
+    margin: 0;
+    background: url("../img/black-gravel.jpg") fixed repeat;
+}
+.filter {
+    width: 100%;
+    background-color: #292929;
+    padding: 15px 0;
+    border-bottom: 3px solid #222;
+    margin-bottom: 0;
+    border-radius: 5px 5px 15% 15%;
+    -moz-border-radius: 5px 5px 15% 15%;
+    -webkit-border-radius: 5px 5px 15% 15%;
+}
+.label-box {
+    padding: 7px;
+    border-width: 10px;
+    border-style: solid;
+    width: 27%;
+    margin: 0 3%;
+    box-sizing: border-box;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5%;
+}
+.label-box input[type="checkbox"] {
+    float: left;
+    margin: 0 auto;
+    width: 100%;
+    height: 2.5em;
+}
+.filter-ee {
+    border-color: #b5b5b5;
+}
+.filter-cs {
+    border-color: #fbfbfb;
+}
+.filter-math {
+    border-color: #6b6b6b;
+}
+#cv .accomplishments ul li {
+    font-size: 1.25rem;
+    padding: 10px; 
+}
+#cv .accomplishments ul {
+    margin: 2rem 20% 0 20%; 
+    text-align: left;
+}
+#cv .accomplishments {
+    text-align: center; 
+}
+
+
+/*
+***** Navigation ***** 
+*/
+nav {
+    text-align: center;
+}
+#primary-nav {
+    width: 50%;
+    margin: 0 25%;
+    position: absolute;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%
+}
+nav li {
+    vertical-align:top;
+    display: inline-block;
+    margin: 0;
+    padding: 0 10px;
+}
+nav li a {
+    vertical-align:top;
+    color: darkslategrey;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 100%
+}
+nav li a p {
+    vertical-align:top;
+    margin: 0;
+    width: 100%;
+}
+nav li a p:before {
+    vertical-align:top;
+}
+nav select {
+    display: none;
+    background-image: url("../img/menu.png");
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    -mos-appearance: none;
+    background-size: 100% 100%;
+    color: black;
+    background-color: whitesmoke;
+    height: 75px;
+    width: 75px;
+    border: none;
+}
+nav select option {
+    background-color: #222;
+    color: white;
+    font-size: 1.4rem;
+}
+#resume {
+    position: fixed;
+    right: 20px;
+    z-index: 1000;
+    top: 95px;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 15px -2px;
+    border-radius: 5px;
+    background-color: darkslategrey;
+    color: black;
+    border: 1px solid black;  
+}
+#resume a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+#resume:hover {
+    background-color: #233c3c;
+}
+.side-nav {
+    position: fixed;
+    margin-top: 75px;
+    z-index: 999;
+    width: 100%;
+    padding: 10px;
+    margin: 75px 0 0 0;
+    list-style: none;    
+}
+.side-nav .active {
+    opacity: 0.9;
+    background-color: #000;
+}
+.side-nav li {
+    display: inline-block;
+    float: left;
+    margin: 0 10px;
+    padding: 10px;
+    background-color: #171717;
+    border-radius: 10px;
+    opacity: 0.7;    
+}
+.side-nav li:hover {
+    opacity: 0.9;
+}
+select.side-nav {
+    display: none;
+    margin-top: 200px;
+    width: 50%;
+    background-color: #222;
+    border-bottom: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    border-top: none;
+    border-left: none;
+    color: white;
+    font-size: 1.3rem;
+}
+
+
+/*
+***** Text Properties ***** 
+*/
+a {
+    color: inherit;
+}
+a:visited {
+    color: initial;
+}
+header .quarter {
+    display: inline;
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+header #logo-area, header #logo-area a {
+    color: darkslategrey;
+    text-decoration: none;
+}
+header #logo-area a:hover {
+    color: #282e3e;
+}
+h1, h2 {
+    margin: 0;
+}
+#webpage-title {
+    display: block;
+    font-size: 5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+.tagline {
+    display: inline;
+    border-right: 2px solid #bbb;
+    font-size: 1.5rem;
+    padding: 0 20px;
+    font-style: italic;
+    color: #eee;
+}
+.tagline:last-child {
+    border-right: none;
+}
+#about p {
+    max-width: 80%;
+    padding: 0.5rem 10%;
+    text-indent: 1rem;
+    line-height: 2rem;
+    font-size: 1.3rem;
+}
+#copyright {
+    display: inline;
+}
+.scrollToTop{
+    width: 2rem;
+    height: 2rem;
+    padding: 10px;
+    text-align: center;
+    background: whiteSmoke;
+    font-weight: bold;
+    color: #444;
+    text-decoration: none;
+    position: fixed;
+    right: 40px;
+    display: none;
+    line-height: 1rem;
+    font-size: 0.6rem;
+    border-radius: 200px;
+}
+.scrollToTop:hover{
+    opacity: 0.6;
+}
+.scrollToTop span {
+    font-size: 3rem;
+    line-height: 2rem;
+}
+header .social-media-container {
+    float: right;
+    font-size: 1.6rem;
+}
+.social-media-container a {
+    color: inherit;
+    text-decoration: none;
+    margin-right: 10px;
+}
+.social-media-container a:hover {
+    opacity: 0.8;
+}
+header nav li .icon {
+    display: none;
+    font-size: 2rem;
+    color: #363e52;
+    line-height: 75px;
+}
+#blog [class^="icon-"] {
+    font-size: 4rem;
+}
+#contact h2 {
+    font-size: 1.7rem;
+    text-align: center;
+    margin: 1.8rem 0 1rem 0;
+    font-weight: normal;
+}
+#contact form {
+    opacity: 0.9;
+    width: 70%;
+    margin-top: 1.5em;
+    padding: 25px 5%;
+    margin: 0 10%;
+    background-color: #6a6d77;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+#contact .title {
+    margin-bottom: 15px;
+}
+#contact form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 1.2rem;
+    padding: .5em 1em;
+    border: 1px inset #555;
+}
+#contact form label {
+    display: block;
+    width: 100%;
+    text-indent: 1rem;
+    font-size: 1.4rem;
+}
+#contact form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: .5em 1em;
+    border: 1px inset #555;
+    min-height: 10em;
+}
+#contact form #submit {
+    width: 35%;
+    margin: auto;
+    background: #424242;
+    border: 1px solid #111;
+    box-shadow: 0 0 2px;
+    font-weight: bold;
+    color: #fff;
+}
+#contact .social-media-container {
+    text-align: center;
+    min-width: 40%;
+    margin: 0 30%;
+    margin-top: 25px;
+    padding: 10px;
+    border-radius: 500px;
+    background-color: #9c9c9c;
+    opacity: 0.9;
+    font-size: 2rem;
+}
+#contact .social-media-container p {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+#music p {
+    padding: 0 10%;
+}
+#back-to-the-future p {
+    background-color: black;
+    color: white;
+}
+#opening-up-cloud-9 p {
+    background-color: white;
+    color: black;
+}
+#upcoming .title {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 1.3rem;
+    margin: 1em;
+}
+#upcoming ul {
+    list-style: none;
+    padding-right: 40px;
+}
+#upcoming ul li {
+    padding: 10px;
+    background-color: #5d5a5a;
+    border-radius: 5px;
+}
+#upcoming ul li i {
+    margin-right: 50px;
+}
+#upcoming ul li a {
+    float: right;
+    color: white;
+}
+.course-number {
+    font-size: 2rem;
+    font-weight: bold;
+    width: 100%;
+    margin: 0 0 15px 0;
+}
+.course-name {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.course-subject {
+    font-style: italic;
+    font-size: 0.8rem;
+}
+.course-topics ul, .course-languages ul, .course-projects ul{
+    padding-left: 0;
+    list-style: none;
+    clear: both;
+    margin: 0;
+    display: none;
+}
+.course-description .text-description {
+    clear: left;
+    display: none;
+    text-indent: 1rem;
+}
+.course-topics p, .course-languages p, .course-projects div p, .course-description div p {
+    text-decoration: underline;
+    margin: 0 10px 0 0;
+    line-height: 2rem;
+    display: inline;
+    float: left;
+}
+.course-projects h3 {
+    margin: 0.5rem;
+}
+.course-projects ul li {
+    margin-bottom: 15px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.course-projects ul li:nth-of-type(even) {
+    background-color: #efefef;
+    border: 1px solid white;
+}
+.course-projects ul li:nth-of-type(odd) {
+    background-color: white;
+    border: 1px solid #efefef;
+}
+.course-projects ul li p {
+    text-decoration: none !important;
+    width: 100%;
+}
+.course-projects ul li a {
+    display: inline-block;
+    padding: 10px;
+}
+.course-topics span, .course-languages span, .course-projects span, .course-description span:first-of-type {
+    font-size: 2rem;
+    line-height: 2rem;
+    padding-left: 10px;
+    display: block;
+}
+.course-topics, .course-languages, .course-projects {
+    clear: both;
+}
+.course-topics ul li, .course-languages ul li {
+    float: left;
+    clear: none;
+    padding: 5px;
+    margin: 5px;
+    background-color: #d0d0d0;
+    border-radius: 5px;
+}
+.course-languages ul li {
+    background-color: #7b7b7b;
+    color: #eee;
+}
+.course p {
+    margin-top: 0;
+}
+.course-cs .course-topics li {
+    background-color: #e4e4e4;
+}
+.course-math .course-topics li {
+    color: #333;
+    background-color: #b7b7b7;
+}
+.course-topics li:first-of-type, .course-languages li:first-of-type {
+    clear: left;
+}
+#skillset p {
+    margin: 0;
+    padding: 12px 0;
+    border-radius: 0 50px 50px 0;
+    padding-left: 100px;
+    background-color: #1f1f1f;
+}
+#skillset #java p {
+    margin-right: 27%;
+}
+#skillset #python p {
+    margin-right: 29%;
+}
+#skillset #c p {
+    margin-right: 39%;
+}
+#skillset #javascript p {
+    margin-right: 37%;
+}
+#skillset #html p {
+    margin-right: 43%;
+}
+#skillset #css p {
+    margin-right: 44%;
+}
+#skillset #php p {
+    margin-right: 55%;
+}
+#skillset #wordpress p {
+    margin-right: 60%;
+}
+#skillset #sql p {
+    margin-right: 75%;
+}
+#page-education #skillset h2, #page-education #course-filter h2 {
+    margin: 1.5rem 0 1.25rem 0;
+    text-align: center;
+    font-size: 1.8rem;
+    color: #efefef;
+}
+#page-education #skillset h2 {
+    margin: 0;
+    padding: 3rem 0 2.75rem 0;
+    background: #404040;
+    border: 1px solid black;
+    border-top: 0;
+}
+#page-education #skillset h2:first-of-type {
+    border-radius: 0 0 50px 50px;
+}
+#skillset h3 {
+    display: inline-block;
+    width: 17%;
+    text-align: center;
+    font-style: italic;
+    border-right: 1px solid black;
+}
+#skillset h3:first-of-type {
+    margin-left: 10%;
+}
+#skillset h3:last-of-type {
+    border-right: none;
+}
+.side-nav li a {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+#cv .code {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1rem;
+    display: block;
+    text-align: center;
+    background: white;
+    width: 20%;
+    margin: auto;
+    margin-top: 3rem;
+    border-radius: 10px;
+    color: #222;
+    padding: 5px;
+    text-decoration: underline;
+    border: 1px dashed black;
+}
+#cv #peloton-web-design a:visited {
+    color: white;
+}
+#cv #peloton-web-design .code:visited {
+    color: #222;
+}
+#course-filter h2 {
+    margin: 0 !important;
+    padding: 1.5rem 0;
+    background: #292929;
+}
+.filter .title {
+    width: 100%;
+    text-align: center;
+    padding-top: 1em;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+.picture-break p {
+    max-width: 100% !important;
+    width: 100%;
+    padding: 0 !important;
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: 'Roboto', sans-serif !important;
+    color: #363e52;
+    margin: 2rem 0;
+}
+.picture-break p a {
+    color: #363e52;
+    text-decoration: none;
+}
+.picture-break p:before {
+    font-family: 'icomoon' !important;
+    font-size: 3rem;
+    margin-right: 20px;
+    vertical-align: text-bottom;
+}
+#cv .title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-weight: bold;   
+}
+#cv .location {
+    font-size: 1.4rem;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+#cv .time {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 0;
+    font-style: italic;    
+}
+#cv .roll {
+    font-size: 1.2rem;
+    text-align: center;    
+}
+#cv .description {
+    text-indent: 2rem;
+    margin: 0 10%;
+    font-size: 1.1rem;
+    line-height: 2rem;
+}
+#cv .accomplishments span {
+    font-size: 1.2rem;
+    padding: 4px 10px;
+    border-bottom: 2px dotted black;
+    font-style: italic;
+}
+
+
+/*
+***** Images *****
+*/
+.gradient {
+    height: 75px;
+    width: 100%;
+    display: block;
+}
+.gray-to-whiteblue {
+    background: #d6e0e9; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#9c9c9c, #d6e0e9); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#9c9c9c, #d6e0e9); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#9c9c9c, #d6e0e9); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#9c9c9c, #d6e0e9); /* Standard syntax */
+}
+.whiteblue-to-gray {
+    background: #9c9c9c; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#d6e0e9, #9c9c9c); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#d6e0e9, #9c9c9c); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#d6e0e9, #9c9c9c); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#d6e0e9, #9c9c9c); /* Standard syntax */
+}
+#about .profile-pic{
+    height: 500px;
+    float: left;
+    margin: 15px;  
+}
+.picture-break {
+/*    position: absolute;*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    width: 100%;
+}
+#about-me-in-snow {
+    background-image: url("../img/about-me-in-snow.jpg");
+}
+#opening-up-cloud-9  {
+    background: url("../img/opening-up-cloud-9-square.jpg") fixed repeat;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -ms-background-size: 100% 100%;
+}
+#back-to-the-future .info {
+    background: url("../img/back-to-the-future.jpg") fixed repeat;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -ms-background-size: 100% 100%;
+}
+
+
+/*
+***** Icomoon Icons ***** 
+*/
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?ndyg0e');
+    src:  url('../fonts/icomoon.eot?ndyg0e#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?ndyg0e') format('truetype'),
+        url('../fonts/icomoon.woff?ndyg0e') format('woff'),
+        url('../fonts/icomoon.svg?ndyg0e#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-home:before {
+    content: "\e902";
+}
+.icon-code:before {
+    content: "\ea80";
+}
+.icon-library:before {
+    content: "\e921";
+}
+.icon-music:before {
+    content: "\e911";
+}
+.icon-blog:before {
+    content: "\f058";
+}
+.icon-mail:before {
+    content: "\f03b";
+}
+.icon-facebook-circular:before {
+    content: "\e90c";
+    color: #3b5998;
+}
+.icon-linkedin-circular:before {
+    content: "\e90f";
+    color: #0077b5;
+}
+.icon-twitter-circular:before {
+    content: "\e914";
+    color: #1da1f2;
+}
+.icon-soundcloud:before {
+    content: "\e900";
+    color: #f50;
+}
+.icon-instagram-circular:before {
+    content: "\e90e";
+    color: #cd486b;
+}
+.icon-github-circular:before {
+    content: "\e90d";
+    color: #333;
+}
+.icon-notification:before {
+    content: "\ea08";
+}
+.icon-right-arrow:before {
+    content: "\f078";
+}
+.icon-down-arrow:before {
+    content: "\f0a3";
+}
+.icon-calendar:before {
+    content: "\e953";
+}
+.icon-mortar-board:before {
+    content: "\f0d7";  
+}
+.icon-location:before {
+    content: "\e948";   
+}
+.icon-mobile:before {
+    content: "\e958";
+}
+.icon-mail-read:before {
+    content: "\f03c";
+}
+.icon-up-arrow:before {
+    content: "\f03d";
+}
+
+
+/*
+***** Media Queries ***** 
+*/
+@media only screen and (max-width : 1400px) {
+    ul.side-nav {
+        width: 50%;
+    }
+    .side-nav li {
+        margin: 5px 10px;
+    }
+}
+@media only screen and (max-width : 1200px) {
+    header .quarter {
+        margin: 0 10px;
+        width: auto;
+    }
+    .social-media-container a {
+        margin-right: 7px;
+    }
+}
+@media only screen and (max-width : 1024px) {
+    #home {
+        background-image: url("../img/home-square.jpg");
+    }
+    #primary-nav {
+        width: auto;
+        margin: 0;
+        position: absolute;
+        right: 2rem;
+    }
+    #primary-nav ul {
+        display: none;
+    }
+    #primary-nav select {
+        display: inline-block;
+    }
+    .fixed-footer {
+        display: block;
+    }
+    footer {
+        bottom: 100px;
+    }
+    body section:last-of-type {
+        margin-bottom: 150px !important;
+    }
+    header .social-media-container {
+        display: none;
+    }
+    #about-me-in-snow p {
+        width: 80%;
+        margin-left: 20%;
+    }
+    #courses {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+    form .label-box {
+        width: 32.5%;
+        margin: 0;
+    }
+    #contact form {
+        width: 90%;
+        padding: 25px 2.5%;
+        margin: 0 2.5%;
+    }
+    header {
+        height: 200px;
+        line-height: 200px;
+    }
+    header nav select {
+        height: 150px;
+        width: 150px;
+        margin: 25px 0;
+    }
+    section:first-of-type {
+        padding-top: 200px;
+    }
+    #resume {
+        top: 220px;
+    }
+    ul.side-nav {
+        display: none;
+    }
+    select.side-nav {
+        display: inline-block;
+    }
+}
+@media only screen and (max-width : 680px) {
+    .fixed-footer {
+        font-size: 2.5rem;
+    }
+}
+@media only screen and (max-device-width : 1024px) {
+    #home, .picture-break {
+        background-attachment: scroll;
+    }
+    #home {
+        background-image: none;
+    }
+    #home:before {
+        content: "";
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -10;
+        background: url("../img/home-square.jpg") no-repeat center center;
+        -webkit-background-size: 100% 100%;
+        -moz-background-size: 100% 100%;
+        -o-background-size: 100% 100%;
+        -ms-background-size: 100% 100%;
+        background-size: 100% 100%;
+        background-attachment: scroll;
+    }
+    #courses {
+        background-image: none;
+    }
+    #courses:before {
+        content: "";
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -8;
+        background: url("../img/black-gravel.jpg") repeat center center;
+        background-attachment: scroll;
+    }
+    h1, h2 {
+        font-size: 3rem;
+    }
+    #resume {
+        font-size: 1.6rem;
+    }
+    #cv .title {
+        font-size: 4rem;
+    }
+    #cv .location{
+        font-size: 3rem;
+    }
+    #cv .time{
+        font-size: 2rem;
+    }
+    #cv .roll{
+        font-size: 2.5rem;
+    }
+    #cv .description {
+        font-size: 2rem;
+    }
+    #contact .title {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+    #contact form label {
+        font-size: 2rem;
+    }
+    #contact form input {
+        font-size: 1.5rem;
+    }
+    #contact form #submit {
+        font-size: 2rem;
+    }
+    #contact .social-media-container {
+        border-radius: 75px;
+    }
+    #contact .social-media-container p {
+        font-size: 2rem;
+        font-style: italic;
+    }
+    #contact .social-media-container a {
+        font-size: 5rem;
+    }
+    footer {
+        font-size: 1.5rem;
+    }
+    #webpage-title {
+        font-size: 7rem;
+    }
+    .tagline {
+        font-size: 2.5rem;
+    }
+    #about .picture-break p {
+        font-size: 1.9rem;
+    }
+    .picture-break p:before {
+        font-size: 3.5rem;
+    }
+    #course-filter {
+        font-size: 1.5rem;
+    }
+    #page-education #skillset h2, #page-education #course-filter h2 {
+        font-size: 3rem;
+    }
+    .filter .title {
+        font-size: 1.4rem;
+    }
+    .course-number {
+        font-size: 2.5rem;
+    }
+    .course-name {
+        font-size: 1.7rem;
+    }
+    .course-subject {
+        font-size: 1.3rem;
+    }
+    .course-topics p, .course-languages p, .course-projects div p, .course-description div p {
+        font-size: 1.6rem;
+        line-height: 3rem;
+    }
+    .course-topics span, .course-languages span, .course-projects span, .course-description span:first-of-type {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    .course-topics li, .course-languages li {
+        font-size: 1.5rem;
+    }
+    #skillset h3 {
+        font-size: 1.5rem;
+    }
+    #skillset li {
+        font-size: 1.35rem;
+    }
+}
