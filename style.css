@@ -576,12 +576,14 @@ header nav li .icon {
     margin-bottom: 1.2rem;
     padding: .5em 1em;
     border: 1px inset #555;
+    box-sizing: border-box;
 }
 #contact form label {
     display: block;
     width: 100%;
     text-indent: 1rem;
     font-size: 1.4rem;
+    box-sizing: border-box;
 }
 #contact form textarea {
     display: block;
@@ -590,6 +592,7 @@ header nav li .icon {
     padding: .5em 1em;
     border: 1px inset #555;
     min-height: 10em;
+    box-sizing: border-box;
 }
 #contact form #submit {
     width: 35%;
@@ -599,6 +602,7 @@ header nav li .icon {
     box-shadow: 0 0 2px;
     font-weight: bold;
     color: #fff;
+    box-sizing: border-box;
 }
 #contact .social-media-container {
     text-align: center;
